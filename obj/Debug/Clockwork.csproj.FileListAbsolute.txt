@@ -1,0 +1,6 @@
+c:\users\danny\documents\visual studio 2012\Projects\Clockwork\Clockwork\bin\Debug\Clockwork.exe.config
+c:\users\danny\documents\visual studio 2012\Projects\Clockwork\Clockwork\obj\Debug\Clockwork.csprojResolveAssemblyReference.cache
+c:\users\danny\documents\visual studio 2012\Projects\Clockwork\Clockwork\bin\Debug\Clockwork.exe
+c:\users\danny\documents\visual studio 2012\Projects\Clockwork\Clockwork\bin\Debug\Clockwork.pdb
+c:\users\danny\documents\visual studio 2012\Projects\Clockwork\Clockwork\obj\Debug\Clockwork.exe
+c:\users\danny\documents\visual studio 2012\Projects\Clockwork\Clockwork\obj\Debug\Clockwork.pdb
