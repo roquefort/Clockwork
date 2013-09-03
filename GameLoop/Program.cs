@@ -23,9 +23,11 @@ namespace GameLoop
             Console.WriteLine("starting loop");
         }
 
+        /*
         static void GameLoop(double elapsedTime)
         {
             System.Console.WriteLine("loop");
         }
+         * */
     }
 }

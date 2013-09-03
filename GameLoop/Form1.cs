@@ -17,10 +17,10 @@ namespace GameLoop
         bool _fullscreen = false;
         FastLoop _fastLoop;
         StateSystem _system = new StateSystem();
+        FramesPerSecond _fps = new FramesPerSecond(true);
 
         public Form1()
         {
-            
             //add all the states that will be used
             _system.AddState("splash", new SplashcreenState(_system));
             _system.AddState("title_menu", new TitleMenuState());
@@ -34,7 +34,6 @@ namespace GameLoop
             InitializeComponent();
             _openGLControl.InitializeContexts();
             
-
             if (_fullscreen)
             {
                 FormBorderStyle = FormBorderStyle.None;
@@ -50,9 +49,12 @@ namespace GameLoop
         //game loop is passed as a delegate to fast loop
         void GameLoop(double elapsedTime)
         {
+            _fps.Process(elapsedTime);
+            Console.WriteLine(FramesPerSecond.DeltaTime);
             _system.Update(elapsedTime);
             _system.Render();
             _openGLControl.Refresh();
+            
         }
 
         protected override void OnClientSizeChanged(EventArgs e)

@@ -16,6 +16,7 @@ namespace Clockwork2D
         public Vector2 force;
         public double gravityScale;
         public double restitution;
+        //shape center?
 
         public Body()
         {

@@ -15,7 +15,6 @@ namespace GameLoop
         List<IGameObject> drawObjects = new List<IGameObject>();
         //Sphere s1;
 
-
         public TitleMenuState()
         {
             //s1 = new Sphere(50, 32, 32);
@@ -29,6 +28,9 @@ namespace GameLoop
             {
                 drawable.Update(elapsedTime);
             }
+            s1 = drawObjects[0] as Sphere;
+            s1.transform.position.x += 100.0f * elapsedTime;
+
         }
 
         public void Render()
@@ -36,35 +38,8 @@ namespace GameLoop
             //Gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
             Gl.glPointSize(5.0f);
-            
-            /*
-            Gl.glPushMatrix();
-            Gl.glTranslatef(200.0f, 0.0f, 0.0f);
-            DrawTriangle();
-            Gl.glPopMatrix();
- 
-            Gl.glPushMatrix();
-            Gl.glTranslatef(-200.0f, 0.0f, 0.0f);
-            DrawTriangle();
-            Gl.glPopMatrix();
-            */
 
-            //working
-            /*
-            Gl.glPushMatrix();
-            Gl.glColor3d(0.0f, 1.0f, 0.0f);
-            //object location
-            Gl.glTranslatef(-100.0f, 0.0f, 0.0f);
             drawObjects[0].Render();
-            Gl.glPopMatrix();
-             * */
-
-            
-            drawObjects[0].Render();
-            s1 = drawObjects[0] as Sphere;
-            s1.transform.position.x += 0.3f;
-            
-
             drawObjects[1].Render();
 
             Gl.glFinish();

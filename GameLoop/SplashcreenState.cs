@@ -37,10 +37,8 @@ namespace GameLoop
             //  Console.WriteLine("Render splash");
             Gl.glClearColor(1, 1, 1, 1);
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
-            Gl.glFinish();
-            
+            Gl.glFinish();    
         }
-
         #endregion
     }
 }

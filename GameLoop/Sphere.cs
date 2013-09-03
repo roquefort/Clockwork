@@ -35,7 +35,7 @@ namespace GameLoop
 
         public void Update(double elapsedTime)
         {
-            Console.WriteLine("This position is: " + this.transform.position);  
+            //Console.WriteLine("This position is: " + this.transform.position);  
         }
 
         public void Render()
@@ -43,7 +43,6 @@ namespace GameLoop
             Gl.glPushMatrix();
             Gl.glColor3d(0.0f, 1.0f, 0.0f);
             //object location
-            //Gl.glTranslatef(-100.0f, 0.0f, 0.0f);
             Gl.glTranslatef((float)transform.position.x, (float)transform.position.y, 0f);
 
             Gl.glBegin(Gl.GL_POLYGON);

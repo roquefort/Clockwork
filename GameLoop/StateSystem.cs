@@ -28,8 +28,6 @@ namespace GameLoop
             _currentState.Render();
         }
 
-
-
         public void AddState(string stateId, IGameObject state)
         {
             Console.WriteLine("Add State");
