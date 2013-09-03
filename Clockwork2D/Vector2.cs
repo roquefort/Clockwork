@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clockwork2D
 {
-    class Vector2
+    public class Vector2
     {
         private double _x;
         public double x
@@ -79,6 +79,11 @@ namespace Clockwork2D
         {
             double _magnitude = Magnitude();
             return new Vector2(_x / _magnitude, _y / _magnitude);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("({0},{1})", _x, _y);
         }
 
         #region operatorOverrides

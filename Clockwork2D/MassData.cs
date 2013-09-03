@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clockwork2D
 {
-    struct MassData
+    public struct MassData
     {
         public double mass;
         public double inv_mass;

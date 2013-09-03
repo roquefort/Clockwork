@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Clockwork")]
+[assembly: AssemblyTitle("Clockwork2D")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Clockwork")]
+[assembly: AssemblyProduct("Clockwork2D")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("acb7697a-45ed-43fc-ab5c-bc5da375a103")]
+[assembly: Guid("39e1264c-f0fc-49a5-8edf-e442783312a4")]
 
 // Version information for an assembly consists of the following four values:
 //

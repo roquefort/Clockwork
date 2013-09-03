@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clockwork2D
 {
-    class Manifold
+    public class Manifold
     {
         public Body A;
         public Body B;

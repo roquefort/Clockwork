@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clockwork2D
 {
-    class Body
+    public class Body
     {
         public Shape shape;
         public Transform transform;

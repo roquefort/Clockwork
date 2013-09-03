@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clockwork2D
 {
-    class Material
+    public class Material
     {
         float density;
         float restitution;

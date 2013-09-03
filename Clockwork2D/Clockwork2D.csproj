@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2935E14-37EA-4620-A802-7DF99F8FCE75}</ProjectGuid>
+    <ProjectGuid>{2E8993CE-A870-4013-B05D-DA6E079403AD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Clockwork</RootNamespace>
-    <AssemblyName>Clockwork</AssemblyName>
+    <RootNamespace>Clockwork2D</RootNamespace>
+    <AssemblyName>Clockwork2D</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,11 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Particle.cs" />
+    <Compile Include="AABB.cs" />
+    <Compile Include="Body.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="Collision.cs" />
+    <Compile Include="Manifold.cs" />
+    <Compile Include="MassData.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="Pair.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs" />
-    <Compile Include="Vector3.cs" />
-    <Compile Include="Vector3Extensions.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="Transform.cs" />
+    <Compile Include="Vector2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

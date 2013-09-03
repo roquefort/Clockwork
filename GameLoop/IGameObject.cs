@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clockwork2D
+namespace GameLoop
 {
-    class Transform
+    public interface IGameObject
     {
-        public Vector2 position;
-        //in radians
-        public float rotation;
+        void Update(double elapsedTime);
+        void Render();
     }
 }

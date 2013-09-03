@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Clockwork2D
 {
-    abstract class Shape 
+    public class Transform
     {
+        public Vector2 position;
+        //in radians
+        public float rotation;
     }
 }
