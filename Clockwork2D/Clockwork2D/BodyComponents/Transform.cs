@@ -21,5 +21,15 @@ namespace Clockwork2D
                 m_position = value;
             }
         }
+
+        public Transform()
+        {
+            m_position = new Vector2();
+        }
+
+        public Transform(Vector2 position)
+        {
+            this.m_position = position;
+        }
     }
 }

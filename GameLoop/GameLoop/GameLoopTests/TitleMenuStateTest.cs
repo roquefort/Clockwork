@@ -20,25 +20,17 @@ namespace GameLoop.GameLoopTests
             titleMenuState = new TitleMenuState();
         }
 
+
         [Test]
-        public void AddCircleToScene()
+        public void RenderBodyToScene()
         {
-            titleMenuState.AddCircle();
+            titleMenuState.RenderBody();
         }
 
         [Test]
-        public void AddCircleWithRadiusAndTransformToScene()
+        public void AddBodyTooScene()
         {
-            float radius = 25.5f;
-            Transform transform = new Transform();
-            transform.position = new Vector2(4, 20);
-            titleMenuState.AddCircle(radius, transform);
-        }
-
-        [Test]
-        public void RenderCircleTooScene()
-        {
-            titleMenuState.RenderCircle();
+            titleMenuState.AddBody();
         }
 
         [Test]
@@ -47,13 +39,6 @@ namespace GameLoop.GameLoopTests
             Circle circle = new Circle(20.0f);
             Vector2 position = new Vector2(2, 5);
             circle.transform.position = position;
-        }
-
-        [Test]
-        public void AddCircleWithRadiusAndPosition()
-        {
-            float radius = 32.5f;
-            titleMenuState.AddCircle(32.5f, new Vector2(100,100));
         }
     }
 }

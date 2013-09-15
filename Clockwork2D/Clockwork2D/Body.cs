@@ -20,20 +20,20 @@ namespace Clockwork2D
         public Body()
         {
             this.transform = new Transform();
+            this.transform.position = new Vector2();
             this.velocity = new Vector2();
         }
 
         public Body(Shape shape) : this()
         {
-
+            this.shape = shape;
         }
 
-        public Body(Shape shape, Transform transform, MassData massData)
+        public Body(Shape shape, Transform transform, MassData massData) : this()
         {
             this.shape = shape;
             this.transform = transform;
             this.massData = massData;
-            this.velocity = new Vector2();
         }
     }
 }

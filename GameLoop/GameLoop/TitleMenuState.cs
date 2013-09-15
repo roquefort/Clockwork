@@ -10,14 +10,16 @@ namespace GameLoop
 {
     class TitleMenuState : IGameObject
     {
-        double _currentRotation = 0;
         private List<Circle> drawCircles;
+        private List<Body> drawBodies;
 
         public TitleMenuState()
         {
             drawCircles = new List<Circle>();
+            drawBodies = new List<Body>();
 
             AddCircle();
+            AddBody();
 
             //circle 2
             Transform circle2Transform = new Transform();
@@ -31,15 +33,13 @@ namespace GameLoop
 
         public void Update(double elapsedTime)
         {
-            //s1.transform.position.x += 100.0f * elapsedTime;
-            //drawCircles[0].transform.position.x += 100.0f * elapsedTime;
-            //drawCircles[1].transform.position.y -= 50.0f * elapsedTime;
             drawCircles[2].transform.position.y -= 35.0f * elapsedTime;
         }
 
         public void Render()
         {
             RenderCircle();
+            RenderBody();
         }
 
         private void GenerateCollisionInformation()
@@ -94,6 +94,21 @@ namespace GameLoop
             foreach (Circle circle in drawCircles)
             {
                 circle.Render();
+            }
+        }
+
+        public void AddBody()
+        {
+            Body body = new Body();
+            body.shape = new Circle(15f, new Vector2(20,-20));
+            drawBodies.Add(body);
+        }
+
+        public void RenderBody()
+        {
+            foreach (Body body in drawBodies)
+            {
+                body.shape.Render();
             }
         }
     }
