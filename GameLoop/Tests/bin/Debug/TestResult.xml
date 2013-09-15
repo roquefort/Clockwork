@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\Tests.exe" total="8" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-09-09" time="23:53:18">
+  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.5472" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.2\bin" machine-name="DANNY-PC" user="Danny" user-domain="Danny-PC" />
+  <culture-info current-culture="en-AU" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\Tests.exe" executed="True" result="Success" success="True" time="0.152" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.132" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="TestVector2" executed="True" result="Success" success="True" time="0.126" asserts="0">
+            <results>
+              <test-case name="Tests.TestVector2.CreateVector2" executed="True" result="Success" success="True" time="0.039" asserts="0" />
+              <test-case name="Tests.TestVector2.DivideByScalar" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+              <test-case name="Tests.TestVector2.DotProduct" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="Tests.TestVector2.MagnitudeTestVector2" executed="True" result="Success" success="True" time="0.036" asserts="1" />
+              <test-case name="Tests.TestVector2.MultiplyByScalarTest" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+              <test-case name="Tests.TestVector2.NormaliseVector2" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+              <test-case name="Tests.TestVector2.Subtract2Vectors" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+              <test-case name="Tests.TestVector2.Sum2Vectors" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

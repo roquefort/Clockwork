@@ -1,0 +1,11 @@
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\Tests.exe.config
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\Tests.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\Tests.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\Clockwork2D.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\nunit.framework.dll
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\nunit.mocks.dll
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\Clockwork2D.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\bin\Debug\nunit.framework.xml
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\obj\Debug\Tests.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\Tests\obj\Debug\Tests.pdb

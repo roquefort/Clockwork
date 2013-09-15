@@ -1,0 +1,13 @@
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\bin\Debug\GameLoop.exe.config
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\bin\Debug\GameLoop.exe
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\bin\Debug\GameLoop.pdb
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\obj\Debug\GameLoop.csprojResolveAssemblyReference.cache
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\obj\Debug\GameLoop.Properties.Resources.resources
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\obj\Debug\GameLoop.csproj.GenerateResource.Cache
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\obj\Debug\GameLoop.exe
+c:\users\danny\documents\visual studio 2012\Projects\GameLoop\GameLoop\obj\Debug\GameLoop.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\GameLoop\obj\Debug\GameLoop.Form1.resources
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\GameLoop\bin\Debug\Clockwork2D.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\GameLoop\bin\Debug\Clockwork2D.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\GameLoop\bin\Debug\nunit.framework.dll
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\GameLoop\bin\Debug\nunit.framework.xml

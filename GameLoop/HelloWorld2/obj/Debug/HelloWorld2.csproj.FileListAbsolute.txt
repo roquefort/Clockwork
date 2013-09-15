@@ -1,0 +1,6 @@
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\HelloWorld2\bin\Debug\HelloWorld2.exe.config
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\HelloWorld2\bin\Debug\HelloWorld2.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\HelloWorld2\bin\Debug\HelloWorld2.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\HelloWorld2\obj\Debug\HelloWorld2.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\HelloWorld2\obj\Debug\HelloWorld2.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\GameLoop\HelloWorld2\obj\Debug\HelloWorld2.csprojResolveAssemblyReference.cache

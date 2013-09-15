@@ -1,0 +1,9 @@
+c:\users\danny\documents\visual studio 2012\Projects\Clockwork2D\Clockwork2D\bin\Debug\Clockwork2D.exe.config
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\bin\Debug\Clockwork2D.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\bin\Debug\Clockwork2D.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\obj\Debug\Clockwork2D.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\obj\Debug\Clockwork2D.exe
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\obj\Debug\Clockwork2D.pdb
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\bin\Debug\nunit.framework.dll
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\bin\Debug\nunit.mocks.dll
+C:\Users\Danny\Documents\Visual Studio 2012\Projects\Clockwork2D\Clockwork2D\bin\Debug\nunit.framework.xml
