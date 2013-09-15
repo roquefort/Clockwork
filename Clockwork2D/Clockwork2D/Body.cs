@@ -35,5 +35,9 @@ namespace Clockwork2D
             this.transform = transform;
             this.massData = massData;
         }
+        public void RenderBody()
+        {
+            shape.Render(transform);
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace Clockwork2D
 {
     public abstract class Shape 
     {
-        public virtual void Render()
+        public virtual void Render(Transform transform)
         {
         }
     }

@@ -18,25 +18,9 @@ namespace Clockwork2D
             }
         }
 
-        private Transform m_transform;
-        public Transform transform
-        {
-            set
-            {
-                m_transform = value;
-            }
-
-            get
-            {
-                return m_transform;
-            }
-        }
-
         public Circle()
         {
             this.m_radius = 10;
-            m_transform = new Transform();
-            m_transform.position = new Vector2();
         }
 
         public Circle(float radius) : this()
@@ -44,21 +28,15 @@ namespace Clockwork2D
             this.m_radius = radius;
         }
 
-        public Circle(float radius, Vector2 position) : this()
-        {
-            this.m_radius = radius;
-            this.m_transform.position = position;
-        }
-
-        public override void Render()
+        public override void Render(Transform transform)
         {
             Gl.glPushMatrix();
 
             //set position
 
-            Gl.glTranslatef((float)m_transform.position.x, (float)m_transform.position.y, 0.0f);
+            Gl.glTranslatef((float)transform.position.x, (float)transform.position.y, 0.0f);
 
-            Gl.glBegin(Gl.GL_POLYGON); ;
+            Gl.glBegin(Gl.GL_POLYGON);
             {
                 Glu.GLUquadric quadric = Glu.gluNewQuadric();
                 Glu.gluQuadricDrawStyle(quadric, Glu.GLU_LINE);

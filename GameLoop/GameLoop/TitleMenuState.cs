@@ -10,40 +10,28 @@ namespace GameLoop
 {
     class TitleMenuState : IGameObject
     {
-        private List<Circle> drawCircles;
         private List<Body> drawBodies;
 
         public TitleMenuState()
         {
-            drawCircles = new List<Circle>();
             drawBodies = new List<Body>();
 
-            AddCircle();
             AddBody();
-
-            //circle 2
-            Transform circle2Transform = new Transform();
-            circle2Transform.position = new Vector2(3, 80);
-            AddCircle(25.2f, circle2Transform);
-
-            Transform circle3trans = new Transform();
-            circle3trans.position = new Vector2(500, 300);
-            AddCircle(40.5f, circle3trans);
         }
 
         public void Update(double elapsedTime)
         {
-            drawCircles[2].transform.position.y -= 35.0f * elapsedTime;
+            drawBodies[0].transform.position.y -= 35.0f * elapsedTime;
         }
 
         public void Render()
         {
-            RenderCircle();
             RenderBody();
         }
 
         private void GenerateCollisionInformation()
         {
+            /*
             for (int i = 0; i < drawCircles.Count; ++i)
             {
                 Circle circleA = drawCircles[i];
@@ -53,6 +41,7 @@ namespace GameLoop
                 }
                 
             }
+             * */
         }
 
         private void DrawTriangle()
@@ -67,40 +56,11 @@ namespace GameLoop
             Gl.glEnd();
         }
 
-        //adds a circle to the screen
-        public void AddCircle()
-        {
-            Circle circle = new Circle(20.0f);
-            drawCircles.Add(circle);
-        }
-
-        //add circle with radius and transform
-        public void AddCircle(float radius, Transform transform)
-        {
-            Circle circle = new Circle(radius);
-            circle.transform = transform;
-            drawCircles.Add(circle);
-        }
-
-        public void AddCircle(float radius, Vector2 position)
-        {
-            Circle circle = new Circle(radius, position);
-            drawCircles.Add(circle);
-        }
-
-        //renders all circles to the screen
-        public void RenderCircle()
-        {
-            foreach (Circle circle in drawCircles)
-            {
-                circle.Render();
-            }
-        }
-
         public void AddBody()
         {
             Body body = new Body();
-            body.shape = new Circle(15f, new Vector2(20,-20));
+            Transform transform = new Transform();
+            body.shape = new Circle(15f);
             drawBodies.Add(body);
         }
 
@@ -108,7 +68,7 @@ namespace GameLoop
         {
             foreach (Body body in drawBodies)
             {
-                body.shape.Render();
+                body.RenderBody();
             }
         }
     }

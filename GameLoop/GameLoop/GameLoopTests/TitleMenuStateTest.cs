@@ -33,12 +33,5 @@ namespace GameLoop.GameLoopTests
             titleMenuState.AddBody();
         }
 
-        [Test]
-        public void SetCirclePosition()
-        {
-            Circle circle = new Circle(20.0f);
-            Vector2 position = new Vector2(2, 5);
-            circle.transform.position = position;
-        }
     }
 }
