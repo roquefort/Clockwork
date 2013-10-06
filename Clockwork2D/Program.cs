@@ -11,13 +11,13 @@ namespace Clockwork2D
         static void Main(string[] args)
         {
             Body body = new Body();
-            Shape shape = new Circle();
+            //Shape shape = new Circle();
 
             Transform trans = new Transform();
             trans.position = new Vector2(2, 2);
 
-            body.shape = shape;
-            body.transform = trans;
+            //body.shape = shape;
+            //body.transform = trans;
         }
     }
 }

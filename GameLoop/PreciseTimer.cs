@@ -26,6 +26,7 @@ namespace GameLoop
             GetElapsedTime(); //Get rid of first rubbish result
         }
 
+        //returns delta time or elapsed time
         public double GetElapsedTime()
         {
             long time = 0;

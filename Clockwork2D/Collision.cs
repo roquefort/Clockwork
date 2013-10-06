@@ -8,6 +8,14 @@ namespace Clockwork2D
 {
     class Collision
     {
+
+       // public delegate void DetermineCollision(Pair pair, Body bodA, Body bodyB);
+
+        //public void DetermineCollision(DetermineCollision collision)
+        //{
+            
+        //}
+
         //are bounding boxes colliding
         private bool AABBvsAABB(AABB a, AABB b)
         {
@@ -19,8 +27,9 @@ namespace Clockwork2D
             return true;
         }
 
-        private void CircleVsCircle(Manifold m, Body a, Body b)
+        private void CircleVsCircle(Pair m, Body a, Body b)
         {
+            /*
             Vector2 distance = b.transform.position - a.transform.position;
             Circle circleColA = a.shape as Circle;
             Circle circleColB = b.shape as Circle;
@@ -28,10 +37,10 @@ namespace Clockwork2D
             float radius = circleColA.radius + circleColB.radius;
 
             //Math.Pow((a.position.x + b.position.x), 2) + Math.Pow((a.position.y + b.position.y), 2)
-            if (distance.LengthSquared() > radius * radius)
+            if (distance.SquareMagnitude() > radius * radius)
                 return;
 
-            double aDistance = distance.Length();
+            double aDistance = distance.Magnitude();
             //m->contact_count = 1;
             m.contact_count = 1;
 
@@ -51,7 +60,7 @@ namespace Clockwork2D
                 //vec2 to double
                 m.contacts[0] = m.normal * circleColA.radius + a.transform.position;
             }
-
+            */
             //Circles have collided
             //compute manifold
             //float aDistance = distance

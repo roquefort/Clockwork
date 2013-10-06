@@ -50,11 +50,10 @@ namespace GameLoop
         void GameLoop(double elapsedTime)
         {
             _fps.Process(elapsedTime);
-            Console.WriteLine(FramesPerSecond.DeltaTime);
+            //Console.WriteLine(FramesPerSecond.DeltaTime);
             _system.Update(elapsedTime);
             _system.Render();
             _openGLControl.Refresh();
-            
         }
 
         protected override void OnClientSizeChanged(EventArgs e)

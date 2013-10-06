@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Tao.OpenGl;
 
 namespace GameLoop
 {
@@ -25,7 +26,12 @@ namespace GameLoop
             {
                 return;
             }
+            Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
+            Gl.glPointSize(5.0f);
+
             _currentState.Render();
+
+            Gl.glFinish();
         }
 
         public void AddState(string stateId, IGameObject state)

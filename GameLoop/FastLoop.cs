@@ -33,7 +33,6 @@ namespace GameLoop
         );
 
         PreciseTimer _timer = new PreciseTimer();
-        //create delegates
         public delegate void LoopCallback(double elapsedTime);
         LoopCallback _callback;
         

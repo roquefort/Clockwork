@@ -10,60 +10,132 @@ namespace GameLoop
 {
     class TitleMenuState : IGameObject
     {
-        double _currentRotation = 0;
-        Sphere s1;
-        List<IGameObject> drawObjects = new List<IGameObject>();
-        //Sphere s1;
+        private List<Body> drawBodies;
+        private List<Pair> contactingBodies;
 
         public TitleMenuState()
         {
-            //s1 = new Sphere(50, 32, 32);
-            drawObjects.Add(new Sphere(50, 32, 32,  new Vector2(-400, 0), DrawStyle.GLU_LINE));
-            drawObjects.Add(new Sphere(30, 32, 32, new Vector2(100, 0), DrawStyle.GLU_LINE));    
+            //initalise lists
+            drawBodies = new List<Body>();
+            contactingBodies = new List<Pair>();
+
+            //Add bodies
+            AddBody(new Transform(new Vector2(-200, -30)), 60f);
+            AddBody(new Transform(new Vector2(-200, 200)), 60f);
+            AddBody(new Transform(new Vector2(200, 200)), 40f);
+
+            //create collision pairs
+            CreatePairs();
+            DisplayCollisionPairs();
         }
 
         public void Update(double elapsedTime)
         {
-            foreach (IGameObject drawable in drawObjects)
-            {
-                drawable.Update(elapsedTime);
-            }
-            s1 = drawObjects[0] as Sphere;
-            s1.transform.position.x += 100.0f * elapsedTime;
-
+            //drawBodies[1].transform.position.y -= 35.0f * elapsedTime;
         }
 
         public void Render()
         {
-            //Gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-            Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
-            Gl.glPointSize(5.0f);
-
-            drawObjects[0].Render();
-            drawObjects[1].Render();
-
-            Gl.glFinish();
+            RenderBody();
         }
 
+        private void GenerateCollisionInformation()
+        {
+            /*
+            for (int i = 0; i < drawCircles.Count; ++i)
+            {
+                Circle circleA = drawCircles[i];
+
+                for (int j = i + 1; j < drawCircles.Count; ++j)
+                {
+                }
+                
+            }
+             * */
+        }
+
+        //draw a triangle
         private void DrawTriangle()
         {
             Gl.glBegin(Gl.GL_POLYGON);
-            Gl.glColor4d(0.0, 1.0, 0.0, 0.5);
+            Gl.glColor4d(0.0, 1.0, 1.0, 0.5);
             Gl.glVertex2d(-50, 0);
+            Gl.glColor4d(0.0, 1.0, 0.5, 0.5);
             Gl.glVertex2d(50, 0);
+            Gl.glColor4d(1.0, 0.0, 0.0, 0.5);
             Gl.glVertex2d(0, 50);
             Gl.glEnd();
         }
-    }
 
-    /*
-Gl.glColor4d(1.0, 0.0, 0.0, 0.5);
-Gl.glVertex3d(-50, 0, 0);
-Gl.glColor3d(0.0, 1.0, 0.0);
-Gl.glVertex3d(50, 0, 0);
-Gl.glColor3d(0.0, 0.0, 1.0);
-Gl.glVertex3d(0, 50, 0);
-*/
-    //Gl.glTranslatef(200, 0, 0);
-    //Gl.glTranslatef(20, 10000, 0);
+        //add a circle to the scene
+        public void AddBody()
+        {
+            Body body = new Body();
+            body.shape = new Circle(15f);
+            drawBodies.Add(body);
+        }
+
+        //add body at location
+        public void AddBody(Transform _transform)
+        {
+            Body body = new Body();
+            body.shape = new Circle();
+            body.transform = _transform;
+            drawBodies.Add(body);
+        }
+
+        public void AddBody(Transform _transform, float _radius)
+        {
+            Body body = new Body();
+            body.shape = new Circle(_radius);
+            body.transform = _transform;
+            drawBodies.Add(body);
+        }
+
+        //render all objects in the scene
+        public void RenderBody()
+        {
+            //clear contacts
+            contactingBodies.Clear();
+
+            foreach (Body body in drawBodies)
+            {
+                body.RenderBody();
+            }
+        }
+
+        //creates pairs between possible collision objects
+        public void CreatePairs()
+        {
+            for (int i = 0; i < drawBodies.Count; i++)
+            {
+                Body bodyA = drawBodies[i];
+                for (int j = i + 1; j < drawBodies.Count; j++)
+                {
+                    Body bodyB = drawBodies[j];
+                    //check if object is moving, if it isn't ignore it
+                    Pair pairs = new Pair(bodyA, bodyB);
+                    contactingBodies.Add(pairs);
+                }
+            }
+        }
+
+        //detect collision between objects on the scene
+        public void DetectCollisions()
+        {
+            for (int i = 0; i < contactingBodies.Count; ++i)
+            {
+                //calculate collisions between the pairs
+                //contactingBodies[i]
+            }
+        }
+
+        private void DisplayCollisionPairs()
+        {
+            foreach (Pair pair in contactingBodies)
+            {
+                Console.WriteLine(pair);
+            }
+        }
+    }
 }

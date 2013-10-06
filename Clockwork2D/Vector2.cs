@@ -34,29 +34,22 @@ namespace Clockwork2D
             this._y = y;
         }
 
+        //distance between 2 vectors
+        public static double Distance(Vector2 a, Vector2 b)
+        {
+            return Math.Sqrt(Math.Pow((a.x - b.x), 2) + Math.Pow((a.y - b.y), 2));
+        }
+
         //length of the vector
         public double Magnitude()
         {
-            return Math.Sqrt(_x * _x + _y * _y);
+            return Math.Pow(_x * _x + _y * _y, 0.5);
         }
 
         //square magnitude (for speedy calculations)
         public double SquareMagnitude()
         {
             return (_x * _x + _y * _y);
-        }
-
-        //distance
-        public double Length()
-        {
-            //sqrt is more expensive
-            return Math.Pow((_x * _x) + (_y * _y), 0.5);
-        }
-
-        //distance squared
-        public double LengthSquared()
-        {
-            return _x * _x + _y * _y;
         }
 
         //gets the vetor angle
@@ -104,7 +97,7 @@ namespace Clockwork2D
         }
 
         //product of 2 vectors
-        //the value is the coside of the angle between the two input vectors, 
+        //the value is the cosine of the angle between the two input vectors, 
         //multiplied by the lengths of those vectors.
         //can easily calculate the cosine of the angle
         //by either, making sure that your two vectors are both of lenth 1,
@@ -114,6 +107,8 @@ namespace Clockwork2D
         //-1 means pointing in the opposite direction
         //0 means perpendicular
         //how similar vecotrs are
+
+        //aka dot product
         public static double operator *(Vector2 vec2a, Vector2 vec2b)
         {
             return (vec2a.x * vec2b.x + vec2a.y * vec2b.y);
