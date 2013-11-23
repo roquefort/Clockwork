@@ -22,12 +22,5 @@ namespace GameLoop
             Application.Run(new Form1());
             Console.WriteLine("starting loop");
         }
-
-        /*
-        static void GameLoop(double elapsedTime)
-        {
-            System.Console.WriteLine("loop");
-        }
-         * */
     }
 }

@@ -48,7 +48,6 @@
             this._openGLControl.Size = new System.Drawing.Size(1006, 675);
             this._openGLControl.StencilBits = ((byte)(0));
             this._openGLControl.TabIndex = 0;
-            this._openGLControl.Load += new System.EventHandler(this._openGLControl_Load);
             // 
             // Form1
             // 
@@ -65,7 +64,6 @@
         #endregion
 
         private Tao.Platform.Windows.SimpleOpenGlControl _openGLControl;
-
     }
 }
 

@@ -13,23 +13,24 @@ namespace GameLoop
 {
     public partial class Form1 : Form
     {        
-        bool _fullscreen = false;
-        FastLoop _fastLoop;
-        StateSystem _system = new StateSystem();
+        private bool _fullscreen = false;
+        private FastLoop _fastLoop;
+        private StateSystem _system = new StateSystem();
 
         public Form1()
         {
-            //add all the states that will be used
-            _system.AddState("splash", new SplashcreenState(_system));
-            _system.AddState("title_menu", new TitleMenuState());
-            _system.AddState("sprite_test", new DrawSpriteState());
-            //select the start state
+            CreateGameStates();
             _system.ChangeState("title_menu");
-
             _fastLoop = new FastLoop(GameLoop);
-            InitializeComponent();
-            _openGLControl.InitializeContexts();  
 
+            InitializeComponent();
+            _openGLControl.InitializeContexts();
+
+            CheckIfFullScreenAndChange();
+        }
+
+        private void CheckIfFullScreenAndChange()
+        {
             if (_fullscreen)
             {
                 FormBorderStyle = FormBorderStyle.None;
@@ -39,9 +40,15 @@ namespace GameLoop
             {
                 ClientSize = new Size(1280, 720);
             }
-            //Setup2DGraphics(ClientSize.Width, ClientSize.Height);
         }
-        
+
+        private void CreateGameStates()
+        {
+            _system.AddState("splash", new SplashcreenState(_system));
+            _system.AddState("title_menu", new TitleMenuState());
+            _system.AddState("sprite_test", new DrawSpriteState());
+        }
+
         //game loop is passed as a delegate to fast loop
         void GameLoop(double elapsedTime)
         {
@@ -67,11 +74,6 @@ namespace GameLoop
             Gl.glOrtho(-halfWidth, halfWidth, -halfHeight, halfHeight, -100, 100);
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
             Gl.glLoadIdentity();
-        }
-
-        private void _openGLControl_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

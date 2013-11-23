@@ -32,26 +32,26 @@ namespace GameLoop
         uint flags
         );
 
-        PreciseTimer _timer = new PreciseTimer();
+        PreciseTimer timer = new PreciseTimer();
+        
         public delegate void LoopCallback(double elapsedTime);
-        LoopCallback _callback;
+        LoopCallback callBack;
         
         //get the passed in method and set it as the callback
         public FastLoop(LoopCallback callback)
         {
-            _callback = callback;
-            //check to see whether the application is in idle mode, if so run OnApplicationEnterIdle
+            this.callBack = callback;
             Application.Idle += new EventHandler(OnApplicationEnterIdle);
         }
 
-        //check if there is anything that needs to be run if not, call the game loop (_callback()
-        //that was passed through in the constructor and applied to the local delegate
-        //then run the delegate, this runs the passed in parameter (gameloop)
+        //check if the app is in idle, if not run delegate (calls GameLoop
+        //function in GameLoop class and passes in PreciseTimer elapsed time)
+        //since last update
         private void OnApplicationEnterIdle(object sender, EventArgs e)
         {
             while (IsAppStillIdle())
             {
-                _callback(_timer.GetElapsedTime());
+                callBack(timer.GetElapsedTime());
             }
         }
 

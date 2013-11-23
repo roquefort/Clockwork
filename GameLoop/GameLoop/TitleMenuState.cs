@@ -30,16 +30,16 @@ namespace GameLoop
 
         public void Update(double elapsedTime)
         {
+            //if this has console.writeline on constantly 
+            //it lags the program
             CheckCollisionPairs();
+           
+            //object movement
             drawBodies[1].transform.position.y -= 20.0f * elapsedTime;
-            Console.WriteLine(elapsedTime);
         }
 
         public void Render()
         {
-            //m_drawBodies[0].shape.Render(new Transform(new Vector2(0, 0)));
-
-            //TODO causing render error
             RenderBody();
         }
 
@@ -106,10 +106,12 @@ namespace GameLoop
         //prints out the pairs of collisions that could occur
         private void DisplayCollisionPairs()
         {
+            Console.WriteLine("START collision pairs \n");
             foreach (Pair pair in contactingBodies)
             {
                 Console.WriteLine(pair);
             }
+            Console.WriteLine("END collision pairs \n");
         }
 
         //checks collisions between pairs

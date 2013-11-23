@@ -45,7 +45,6 @@ namespace Clockwork2D
 
         public void SolveCollision()
         {
-            Console.WriteLine("Running SolveCollision()");
             //for the case of a circle
             Circle circleA = m_bodyA.shape as Circle;
             Circle circleB = m_bodyB.shape as Circle;
@@ -54,17 +53,17 @@ namespace Clockwork2D
 
             double distance = Vector2.Distance(m_bodyA.transform.position, m_bodyB.transform.position);
             double collision = distance - addedRadi;
-            Console.WriteLine(string.Format("Added Radi is {0} and distance is {1}", addedRadi, distance));
+            //Console.WriteLine(string.Format("Added Radi is {0} and distance is {1}", addedRadi, distance));
 
             if (collision < 0)
             {
                 //resolve collsions
-                //Console.WriteLine(string.Format("collision occuring between Body {0} and Body {1} \n", m_bodyA.id, m_bodyB.id)); 
+                Console.WriteLine(string.Format("collision occuring between Body {0} and Body {1} \n", m_bodyA.id, m_bodyB.id)); 
             }
             else if (collision == 0)
             {
                 //on collision
-                //Console.WriteLine(string.Format("Body {0} and Body {1} have just collided \n", m_bodyA.id, m_bodyB.id)); 
+               Console.WriteLine(string.Format("Body {0} and Body {1} have just collided \n", m_bodyA.id, m_bodyB.id)); 
             }
             else
             {

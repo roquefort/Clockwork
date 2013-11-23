@@ -64,7 +64,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FramesPerSecond.cs" />
     <Compile Include="GameLoopTests\FastLoopTest.cs" />
     <Compile Include="GameLoopTests\PreciseTimerTest.cs" />
     <Compile Include="GameLoopTests\StateSytemTest.cs" />
