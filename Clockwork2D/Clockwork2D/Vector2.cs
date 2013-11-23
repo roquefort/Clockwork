@@ -37,7 +37,8 @@ namespace Clockwork2D
         //distance between 2 vectors
         public static double Distance(Vector2 a, Vector2 b)
         {
-            return Math.Sqrt(Math.Pow((a.x - b.x), 2) + Math.Pow((a.y - b.y), 2));
+            //Console.WriteLine("A.X " + a.x + ", A.Y " + a.y + ", B.X" + b.x + ", B.Y" + b.y); 
+            return (double) Math.Sqrt(Math.Pow((a.x - b.x), 2) + Math.Pow((a.y - b.y), 2));
         }
 
         //length of the vector

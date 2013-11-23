@@ -8,6 +8,8 @@ namespace Clockwork2D
 {
     public class Body
     {
+        public static int currentID;
+        public int id;
         public Shape shape;
         public Transform transform;
         public Material material;
@@ -22,6 +24,7 @@ namespace Clockwork2D
             this.transform = new Transform();
             this.transform.position = new Vector2();
             this.velocity = new Vector2();
+            id = ++currentID;
         }
 
         public Body(Shape shape) : this()
@@ -38,6 +41,11 @@ namespace Clockwork2D
         public void RenderBody()
         {
             shape.Render(transform);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("ID is {0}", id);
         }
     }
 }

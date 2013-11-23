@@ -56,7 +56,7 @@
     <Compile Include="Body.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="Collision.cs" />
-    <Compile Include="Manifold.cs" />
+    <Compile Include="Pair.cs" />
     <Compile Include="BodyComponents\MassData.cs" />
     <Compile Include="BodyComponents\Material.cs" />
     <Compile Include="Program.cs" />

@@ -8,6 +8,14 @@ namespace Clockwork2D
 {
     class Collision
     {
+
+       // public delegate void DetermineCollision(Pair pair, Body bodA, Body bodyB);
+
+        //public void DetermineCollision(DetermineCollision collision)
+        //{
+            
+        //}
+
         //are bounding boxes colliding
         private bool AABBvsAABB(AABB a, AABB b)
         {

@@ -53,7 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clockwork2DTests\TestManifold.cs" />
+    <Compile Include="Clockwork2DTests\TestPair.cs" />
     <Compile Include="Clockwork2DTests\TestShape.cs" />
     <Compile Include="Clockwork2DTests\TransformTest.cs" />
     <Compile Include="DrawSpriteState.cs" />
